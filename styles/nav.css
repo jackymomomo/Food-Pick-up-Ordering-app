@@ -1,1 +1,12 @@
- <!-- Nav CSS -->
+/* Nav CSS*/
+
+.nav-bar {
+  height: 150px;
+  width: 100%;
+  color: #0000ff;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

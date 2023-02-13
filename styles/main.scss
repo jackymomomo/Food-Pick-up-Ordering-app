@@ -65,3 +65,13 @@ body {
   text-shadow: 1px 1px #333;
 }
 
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: dodgerblue;
+  text-shadow: 2px 2px 2px black;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  font-family: "Source Sans Pro", sans-serif;
+}

@@ -32,6 +32,13 @@ body {
   padding-left: 1.5em;
 }
 
+.nav-Bar:hover{
+  background-color: #645e5d;
+  transition: 0.3s ease-in-out;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 .signup-btn {
   background-color: #4CAF50;
   color: white;
@@ -49,3 +56,12 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+
+.logo {
+  font-family: 'Bungee', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #ff6600;
+  text-shadow: 1px 1px #333;
+}
+

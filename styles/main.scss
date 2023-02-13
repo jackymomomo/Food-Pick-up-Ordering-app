@@ -1,5 +1,5 @@
 body {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ body {
 
 .nav-Bar {
   height: 150px;
-  width: 200%;
+  width: 100%;
   color: #0000ff;
   position: fixed;
   top: 0;

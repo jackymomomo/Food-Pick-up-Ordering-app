@@ -1,6 +1,6 @@
 /* Nav CSS*/
 
-.nav-bar {
+.nav-Bar {
   height: 150px;
   width: 100%;
   color: #0000ff;
@@ -9,4 +9,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #666973
 }

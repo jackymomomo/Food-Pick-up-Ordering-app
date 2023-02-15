@@ -1,71 +1,86 @@
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
-VALUES
-("Spring Rolls", 800, 1, 0, 0);
+-- appetizers
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Steamed Dumplings", 750, 1, 0, 0);
+('Spring Rolls', 800, true, false, false, 'Crispy deep-fried rolls filled with veggies and served with sweet chili sauce', true);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Fried Wontons", 700, 1, 0, 0);
+('Steamed Vegetarian Dumplings', 750, true, false, false, 'Soft steamed dumplings filled with vegetables', true);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Scallion Pancakes", 675, 1, 0, 0);
+('Steamed Pork Dumplings', 750, true, false, false, 'Soft steamed dumplings filled with savory pork', false);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Spicy Sesame Noodles", 850, 1, 0, 0);
+('Fried Wontons', 700, true, false, false, 'Crispy fried wontons filled with cream cheese', true);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Wonton Soup", 750, 0, 0, 1);
+('Scallion Pancakes', 675, true, false, false, 'Flaky, savory pancakes made with scallions and flour',true);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
-VALUES
-("Hot and Sour Soup", 700, 0, 0, 1);
+-- soups
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Egg Drop Soup", 750, 0, 0, 1);
+('Spicy Sesame Noodles', 850, true, false, false, 'Chewy noodles tossed in a spicy sesame sauce and topped with sesame seeds', true);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Kung Pao Chicken", 1400, 0, 1, 0);
+('Wonton Soup', 750, false, false, true, 'Savory soup with wontons filled with cream cheese',true);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Moo Shu Pork", 1400, 0, 1, 0);
+('Hot and Sour Soup', 700, false, false, true, 'Soup with a combination of hot and sour flavors, typically with mushrooms and tofu', true);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Sweet and Sour Pork", 1350, 0, 1, 0);
+('Egg Drop Soup', 750, false, false, true, 'A classic Chinese soup made with beaten eggs and vegetables', true);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
-VALUES
-("Beef and Broccoli", 1350, 0, 1, 0);
+-- mains
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Shrimp with Lobster Sauce", 1700, 0, 1, 0);
+('Kung Pao Chicken', 1400, false, true, false, 'Spicy stir-fried chicken with peanuts, vegetables and chili peppers', false);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Mongolian Beef", 1350, 0, 1, 0);
+('Moo Shu Pork', 1400, false, true, false, 'Stir-fried pork with vegetables and pancakes for wrapping', false);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Sesame Tofu", 1200, 0, 1, 0);
+('Sweet and Sour Pork', 1350, false, true, false, 'Crispy pork in a sweet and sour sauce with pineapple and peppers', false);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Vegetable Fried Rice", 1300, 0, 1, 0);
+('Peking Duck', 2950, false, true, false, 'Crispy duck served with thin pancakes, scallions and cucumber', false);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Chicken with Cashews", 1500, 0, 1, 0);
+('Beef and Broccoli', 1650, false, true, false, 'Tender strips of beef with fresh broccoli in a savory sauce', false);
 
-INSERT INTO menu_item (item_name, price, appetizer, main, soup)
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-("Mapo Tofu", 1200, 0, 1, 0);
+('Shrimp with Lobster Sauce', 2350, false, true, false, 'Sautéed shrimp in a rich and flavorful lobster sauce', false);
+
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
+VALUES
+('Mongolian Beef', 1550, false, true, false, 'Stir-fried beef with scallions in a sweet and spicy sauce', false);
+
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
+VALUES
+('Sesame Tofu', 1650, false, true, false, 'Crispy tofu in a sweet and tangy sesame sauce', true);
+
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
+VALUES
+('Vegetable Fried Rice', 1650, false, true, false, 'Fried rice with mixed vegetables and eggs', true);
+
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
+VALUES
+('Chicken with Cashews', 1700, false, true, false, 'Stir-fried chicken with cashews in a savory sauce', false);
+
+INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
+VALUES
+('Mapo Tofu', 1650, false, true, false, 'Spicy tofu dish in a flavorful chili sauce', true);
+ 

@@ -20,7 +20,8 @@
   integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
   crossorigin="anonymous"
 />
-
+<link rel="stylesheet" href="/styles/nav.css">
+<link rel="stylesheet" href="/styles/food-menus.css">
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
@@ -38,19 +39,18 @@
   <h1>
   <!-- Top nav bar (fixed) -->
   <body>
-    <nav class="nav-Bar">
-      <div class="nav-container">
-        <span class="logo">Wok 'n Roll</span>
-      </div>
-      <div class="nav-footer-content">
-        <p>Chinese restaurants in the United States began during the California gold rush, which brought twenty to thirty thousand immigrants across from the Canton (Kwangtung or Guangdong) region of China. The first documented Chinese restaurant opened in 1849 as the Canton Restaurant.</p>
-        <p class="open-hours">Hours of Operations: M-F 9AM to 9PM</p>
-      </div>
-      <div class="nav-buttons">
-        <button class="signup-btn">Sign Up</button>
-      </div>
-    </nav>
 
+    <nav class="nav-Bar">
+      <a href="#" class="logo">Wok, & roll </a>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Specials</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <a href="#" class="signup-btn">Sign Up</a>
+    </nav>
+    <section class="food-menus">
     <div class="food-images">
       <a href="#menu1" class="food-item">
         <img class="specials">
@@ -83,14 +83,14 @@
         <div> <h3>Unicorn Sundae</h3>
           <p> Vanilla ice cream topped with rainbow sprinkles, whipped cream, and a cherry</p>
         </div>
-        <div> <h3>Steak </h3>
-          <p></p>
+        <div> <h3>Centaur Steak </h3>
+          <p> Grilled ribeye steak with garlic butter and a red wine reduction</p>
         </div>
         <div> <h3>Chicken Tikka Masala</h3>
           <p></p>
         </div>
-        <div><h3>Pasta</h3>
-          <p></p>
+        <div><h3>Pegasus Panna Cotta</h3>
+          <p>Vanilla panna cotta topped with mixed berry compote</p>
         </div>
       </div>
     </div>
@@ -152,7 +152,42 @@
         </div>
       </div>
     </div>
+</section>
+<!--
+<section class="shopping-cart">
+  <div class="shopping-container">
+		<h1>Shopping Cart</h1>
+		<div class="products">
+			<div class="product">
+				<h2>Product 1</h2>
+				<p>Price: $10</p>
+				<button class="add-to-cart" data-name="Product 1" data-price="10">Add to Cart</button>
+			</div>
+			<div class="product">
+				<h2>Product 2</h2>
+				<p>Price: $15</p>
+				<button class="add-to-cart" data-name="Product 2" data-price="15">Add to Cart</button>
+			</div>
+			<div class="product">
+				<h2>Product 3</h2>
+				<p>Price: $20</p>
+				<button class="add-to-cart" data-name="Product 3" data-price="20">Add to Cart</button>
+			</div>
+		</div> -->
+		<!-- Add the shopping cart button -->
+<!-- <button class="open-cart">Shopping Cart</button> -->
 
+<!-- Add the cart container -->
+<!-- <div class="cart-container" style="display:none;">
+  <div class="popup">
+    <h2>Shopping Cart</h2>
+    <ul class="cart-items"></ul>
+    <p class="total"></p>
+    <button class="checkout" disabled>Checkout</button>
+    <button class="close-popup">Close</button>
+  </div>
+</div>
+</section> -->
 </body>
 
 </html>

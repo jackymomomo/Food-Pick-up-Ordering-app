@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<link rel="stylesheet" href="/styles/food_menus.css" >
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
@@ -39,25 +39,22 @@
   <h1>
     <!-- Top nav bar (fixed) -->
     <nav class="nav-Bar">
-      <div>
-        <span class="logo">Wok 'n Roll</span>
+      <a href="#" class="logo">Wok, & roll </a>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Specials</a>
+        <a href="#">Contact Us</a>
       </div>
-
-      <footer>
-        <button class="write">
-          <span><b>Pick UP</b> Ordering App</span>
-          <i class="fas fa-angle-double-down"></i>
-        </button>
-      </footer>
+      <a href="#" class="signup-btn">Sign Up</a>
     </nav>
-  </h1>
   <% console.log(menuItems) %>
     <!-- shop section -->
     <!-- box 1 -->
 
-    <section class="shop-container">
+    <!-- <section class="shop-container">
       <h2 class="section-title">Menu</h2>
-      <!-- content -->
+
       <div class="shop-content">
         <%menuItems.forEach((menuItem)=>{ %>
 
@@ -72,6 +69,80 @@
           </div>
 
           <% }) %>
+      </div>
+    </section> -->
+    <nav class="nav-Bar">
+      <a href="#" class="logo">Wok, & roll </a>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Specials</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <a href="#" class="signup-btn">Sign Up</a>
+    </nav>
+    <section class="food-menus">
+    <div class="food-images">
+      <a href="#menu1" class="food-item">
+        <img class="specials">
+        <div class="hover-box"></div>
+      </a>
+      <a href="#menu2" class="food-item">
+        <img class="dinner">
+        <div class="hover-box"></div>
+      </a>
+      <a href="#menu3" class="food-item">
+        <img class="breakfast">
+        <div class="hover-box"></div>
+      </a>
+    </div>
+
+      <div id="menu1" class="menu">
+        <div class="grid-container">
+          <% menuItems.forEach((menuItem) => { %>
+            <div class="product-box">
+              <h2 class="product-title">
+                <%= menuItem.item_name %>
+              </h2>
+              <span class="product-price">
+                <%= menuItem.price %>
+              </span>
+              <i class="fa-solid fa-bag-shopping add-cart"></i>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+
+      <div id="menu2" class="menu">
+        <div class="grid-container">
+          <% menuItems.forEach((menuItem) => { %>
+            <div class="product-box">
+              <h2 class="product-title">
+                <%= menuItem.item_name %>
+              </h2>
+              <span class="product-price">
+                <%= menuItem.price %>
+              </span>
+              <i class="fa-solid fa-bag-shopping add-cart"></i>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+
+      <div id="menu3" class="menu">
+        <div class="grid-container">
+          <% menuItems.forEach((menuItem) => { %>
+            <div class="product-box">
+              <h2 class="product-title">
+                <%= menuItem.item_name %>
+              </h2>
+              <span class="product-price">
+                <%= menuItem.price %>
+              </span>
+              <i class="fa-solid fa-bag-shopping add-cart"></i>
+            </div>
+          <% }) %>
+        </div>
       </div>
     </section>
 

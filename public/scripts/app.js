@@ -89,7 +89,7 @@ function handleBuyOrder() {
 
   update();
 }
-// update & rerender functions 
+// update & rerender functions
 function updateTotal() {
   let cartBoxes = document.querySelectorAll('.cart-box');
   const totalElement = document.querySelector('.total-price')
@@ -127,7 +127,7 @@ function addEvents() {
   cartQuantityInputs.forEach(input => {
     input.addEventListener("change", handleChangeItemQuantity)
   })
-  
+
   // add item to cart
   let addCartButtons = document.querySelectorAll(".add-cart");
   addCartButtons.forEach(button => {
@@ -147,3 +147,19 @@ function update() {
 
 
 
+// Client facing scripts here
+const foodItems = document.querySelectorAll('.food-item');
+const menus = document.querySelectorAll('.menu');
+
+foodItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    if (menus[index].style.display === 'none') {
+      menus.forEach((menu) => {
+        menu.style.display = 'none';
+      });
+      menus[index].style.display = 'block';
+    } else {
+      menus[index].style.display = 'none';
+    }
+  });
+});

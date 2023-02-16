@@ -1,6 +1,6 @@
 // load .env data into process.env
 require('dotenv').config();
-
+const db = require('./db/connection.js')
 // Web server config
 const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
@@ -31,6 +31,7 @@ app.use(express.static('public'));
 const userApiRoutes = require('./routes/users-api');
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
+const { response } = require('express');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -45,8 +46,17 @@ app.use('/users', usersRoutes);
 // Separate them into separate routes files (see above).
 
 app.get('/', (req, res) => {
-  res.render('index');
+  db.query('SELECT * FROM menu_item')
+    .then((response) => {
+      response.rows
+      // console.log('response.rows', response.rows)
+      const templateVars = { menuItems: response.rows }
+      // console.log(templateVars)
+      res.render('index', templateVars);
+  })
+
 });
+// app.post('/', (req, res))
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

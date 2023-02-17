@@ -37,6 +37,20 @@ The following steps are only for _one_ of the group members to perform.
   - It runs through each of the files, in order, and executes them against the database. 
   - Note: you will lose all newly created (test) data each time this is run, since the schema files will tend to `DROP` the tables and recreate them.
 
+
+# Stack used for this project:
+* ES6 for server-side (NodeJS) code
+* NodeJS
+* Express
+* RESTful routes
+* One or more CSS or UI "framework"s:
+* jQuery
+* A CSS preprocessor such as SASS, Stylus, or PostCSS for styling -- or CSS Custom properties and no CSS preprocessor
+* PostgreSQL and pg (with promises) for DBMS
+* git for version control
+
+
+
 ## Dependencies
 
 - Node 10.x or above

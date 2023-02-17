@@ -20,15 +20,16 @@
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/nav.css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/error-message.css" type="text/css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/shopping-cart.css" />
-  <link rel="stylesheet" href="/styles/food_menus.css" >
-  <link rel="stylesheet" href="/styles/social-media-icons.css">
+<link rel="stylesheet" href="/styles/food_menus.css" >
+<link rel="stylesheet" href="/styles/social-media-icons.css">
   <link rel="stylesheet" href="/styles/pics.css">
   <link rel="stylesheet" href="/styles/footer.css">
   <link rel="stylesheet" href="/styles/.css">
-  <link rel="stylesheet" href="/styles/testimonials.css">
+  
 
 
   <!-- App script -->
@@ -36,7 +37,7 @@
   <script defer src="/scripts/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 
-  <!-- Meta information -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 </head>
@@ -69,7 +70,6 @@
         <i class="fa-solid fa-bag-shopping fa-lg"></i>
       </div></a>
     </nav>
-
     <!-- Food menus html -->
     <section class="food-menus">
       <h2 class="menu-logo">Menus</h2>
@@ -95,6 +95,7 @@
       <p class="specials-p"> Specials </p>
       <p> Breakfast </p>
     </div>
+
       <div id="menu1" class="menu">
         <div class="grid-container">
           <% menuItems.forEach((menuItem) => { %>
@@ -113,6 +114,7 @@
           <% }) %>
         </div>
       </div>
+
       <div id="menu2" class="menu">
         <div class="grid-container">
           <% menuItems.forEach((menuItem) => { %>
@@ -131,6 +133,7 @@
           <% }) %>
         </div>
       </div>
+
       <div id="menu3" class="menu">
         <div class="grid-container">
           <% menuItems.forEach((menuItem) => { %>
@@ -151,7 +154,6 @@
       </div>
     </section>
 
-    <!-- Pepsi Ad -->
     <section class="pepsi-ad">
       <div class="card">
         <div class="circle"></div>
@@ -162,7 +164,7 @@
             Looking for a refreshing drink that packs a punch? Look no further than Pepsi, with its bold and
             irresistible flavor that's perfect for any occasion. Try a cold and crisp Pepsi today and experience the ultimate refreshment.
           </p>
-          <a href="#">Buy Now</a>
+          <a href="">Buy Now</a>
         </div>
         <img src="https://www.pepsi.com/en-us/uploads/images/can-pzs.png" alt="" />
       </div>
@@ -197,11 +199,13 @@
       <p>Our menu includes a variety of appetizers, entrees, and desserts, as well as vegetarian and gluten-free options. We also offer catering services for events of all sizes. </p>
       <p>At Wok and Roll, we strive to provide our customers with a friendly and welcoming atmosphere, as well as exceptional food and service. We look forward to serving you soon!</p>
     </section>
+
     <div class="about-section-farmhouse">
       <h2 class="about-heading">Farm-to-Table Cooking at its Finest</h2>
       <p class="about-text">At Wok & Roll, we believe in the power of simple, wholesome ingredients to create delicious and satisfying meals. Our chefs work directly with local farmers to source the freshest produce, and our menu changes seasonally to reflect the best that each time of year has to offer. From hearty soups to crispy salads, we have something for every taste and appetite. Join us for a meal and experience the warmth and comfort of a true farmhouse kitchen.</p>
     </div>
     <p class="og-code">Have fun! 🥔</p>
+
     <!-- Footer -->
     <footer>
       <div class="footer-container">
@@ -209,6 +213,7 @@
           <img src="https://i.pinimg.com/564x/db/63/df/db63dfb015cec41306deee05c762d2a0.jpg" alt="Logo">
           <h3>Wok & Roll</h3>
         </div>
+        
         <div class="footer-social">
           <h3>Follow us on social media</h3>
           <div class="social-icons">
@@ -217,6 +222,7 @@
             <a href="https://www.instagram.com/wok_and_roll98/"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
+
         <div class="footer-nav">
           <div class="3d-menu">
             <ul>
@@ -230,11 +236,13 @@
             </ul>
           </div>
         </div>
+
       </div>
       <div class="footer-bottom">
         <p>&copy; 2023 Wok & Roll. All rights reserved.</p>
       </div>
     </footer>
+
 </body>
 
 </html>

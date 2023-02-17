@@ -2,6 +2,8 @@
 DROP TABLE IF EXISTS menu_item CASCADE;
 DROP TABLE IF EXISTS order_menu_item CASCADE;
 DROP TABLE IF EXISTS order_status CASCADE;
+DROP TABLE IF EXISTS menu_item2 CASCADE;
+
 
 CREATE TABLE menu_item (
   id SERIAL PRIMARY KEY NOT NULL,
@@ -11,6 +13,17 @@ CREATE TABLE menu_item (
   main BOOLEAN NOT NULL,
   soup BOOLEAN NOT NULL,
   description VARCHAR(255) NOT NULL,
+  vegetarian BOOLEAN NOT NULL
+);
+
+CREATE TABLE menu_item2 (
+  id SERIAL PRIMARY KEY,
+  item_name TEXT NOT NULL,
+  price NUMERIC NOT NULL,
+  appetizer BOOLEAN NOT NULL,
+  main BOOLEAN NOT NULL,
+  soup BOOLEAN NOT NULL,
+  description TEXT NOT NULL,
   vegetarian BOOLEAN NOT NULL
 );
 

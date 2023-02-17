@@ -14,11 +14,11 @@ VALUES
 
 INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-('Fried Wontons', 700, true, false, false, 'Crispy fried wontons filled with cream cheese', true);
+('Fried Wontons', 7.00, true, false, false, 'Crispy fried wontons filled with cream cheese', true);
 
 INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
-('Scallion Pancakes', 675, true, false, false, 'Flaky, savory pancakes made with scallions and flour',true);
+('Scallion Pancakes', 6.75, true, false, false, 'Flaky, savory pancakes made with scallions and flour',true);
 
 -- soups
 
@@ -83,4 +83,14 @@ VALUES
 INSERT INTO menu_item (item_name, price, appetizer, main, soup, description, vegetarian)
 VALUES
 ('Mapo Tofu', 1650, false, true, false, 'Spicy tofu dish in a flavorful chili sauce', true);
- 
+
+INSERT INTO menu_item2 (item_name, price, appetizer, main, soup, description, vegetarian)
+VALUES
+('Teriyaki Tofu Skewers', 950, true, false, false, 'Marinated tofu skewers served with a sesame dipping sauce', true),
+('Crab Rangoon', 900, true, false, false, 'Crispy wonton pockets filled with a creamy crab and cheese filling', false),
+('Vegetable Spring Rolls', 750, true, false, false, 'Crispy spring rolls filled with mixed vegetables and served with sweet chili sauce', true),
+('Beef Noodle Soup', 1150, false, true, true, 'A comforting noodle soup with tender beef and a rich broth', false),
+('Honey Garlic Shrimp', 1750, false, true, false, 'Sautéed shrimp in a sweet and savory garlic sauce', false),
+('Szechuan Eggplant', 1250, false, true, false, 'Sautéed eggplant in a spicy Szechuan sauce with vegetables', true),
+('Orange Chicken', 1450, false, true, false, 'Crispy chicken in a tangy orange sauce with broccoli', false),
+('General Tso tofu', 1350, false, true, false, 'Crispy tofu in a sweet and spicy sauce with vegetables', true);

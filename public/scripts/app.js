@@ -20,7 +20,7 @@ addEvents();
 //   start();
 // }
 // start
-// function start() { 
+// function start() {
 //   addEvents()
 // }
 
@@ -104,7 +104,7 @@ function updateTotal() {
   })
   total = total.toFixed(2)
   totalElement.innerHTML = "$" + total
-  
+
 
 }
 
@@ -147,9 +147,7 @@ function update() {
   updateTotal();
 }
 
-
-
-// Client facing scripts here
+// Drop down menus 
 const foodItems = document.querySelectorAll('.food-item');
 const menus = document.querySelectorAll('.menu');
 

@@ -85,8 +85,8 @@ const customer = (to, message) => {
 app.post('/', (req, res) => {
   let order = JSON.parse(req.body.order)
   const orderMap = order.map(order => order.title).toString();
-  console.log("orderMap", orderMap)
-  console.log("order", order.title)
+  //console.log("orderMap", orderMap)
+  //console.log("order", order.title)
   const orderMessage = ``
 
 customer('+12063101339', orderMap)

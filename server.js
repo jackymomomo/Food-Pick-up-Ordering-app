@@ -72,10 +72,10 @@ const restaurant = (to) => {
    .then(message => console.log(message.sid))
 };
 
-const customer = (to) => {
+const customer = (to, message) => {
   client.messages
   .create({
-      body: 'Your order has been placed',
+      body: message,
       from: '+18573845092',
       to: to
     })
@@ -83,9 +83,12 @@ const customer = (to) => {
 };
 
 app.post('/', (req, res) => {
-customer('+12063101339')
-customer('+16043666839')
-restaurant('+18254499437')
+  const order = JSON.parse(req.body.order)
+  console.log("order", order[0].title)
+  const orderMessage = ``
+customer('+12063101339', order[0].title, order[0].title)
+customer('+16043666839', order[0].title)
+  restaurant('+18254499437')
   return res.send()
 });
 

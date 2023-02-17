@@ -1,8 +1,28 @@
-$( document ).ready(function() {
-  $( ".button-buy" ).click(function() {
-    $.post( "/", function( data ) {
-      console.log( data );
-    });
+$(document).ready(function () {
+  $(".button-buy").click(function () {
+    update();
+    const orderMessage = [
+  {
+    title: '\n                Wonton Soup\n              ',
+    price: '\n                7.50\n              '
+  },
+  {
+    title: '\n                Scallion Pancakes\n              ',
+    price: '\n                6.75\n              '
+  },
+  {
+    title: '\n                Fried Wontons\n              ',
+    price: '\n                7.00\n              '
+  }
+]
+    const orderData = {
+      orderMessage, 
+      totalPrice: document.querySelector('.total-price').innerHTML
+    }
+    console.log("orderData", orderData)
+    const order = JSON.stringify(itemsAdded)
+    $.post( "/", { order })
+  
   });
   console.log( "ready!" );
 });
@@ -12,6 +32,7 @@ $( document ).ready(function() {
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#cart-close");
+
 
 cartIcon.addEventListener("click", () => {
   cart.classList.add("active")
@@ -53,6 +74,8 @@ function handleAddCartItem() {
   let product = this.parentElement;
   let title = product.querySelector(".product-title").innerHTML;
   let price = product.querySelector(".product-price").innerHTML;
+  console.log(document.querySelector(".cart-quantity"))
+  // let quantity = document.querySelector(".cart-quantity").val();
   console.log(title, price)
 
   let newToAdd = {
@@ -66,7 +89,7 @@ function handleAddCartItem() {
   } else {
     itemsAdded.push(newToAdd)
   }
-
+console.log("itemsAdded", itemsAdded)
   //add product to cart
   let cartBoxElement = CartBoxComponent(title, price)
   let newNode = document.createElement("div")

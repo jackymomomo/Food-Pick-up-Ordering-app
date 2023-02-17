@@ -62,10 +62,10 @@ app.get('/', (req, res) => {
 
 });
 
-const restaurant = (to) => {
+const restaurant = (to, message) => {
   client.messages
   .create({
-      body: 'An order has been placed',
+      body: `An order has been placed: ${message}`,
       from: '+18573845092',
       to: to
     })
@@ -75,7 +75,7 @@ const restaurant = (to) => {
 const customer = (to, message) => {
   client.messages
   .create({
-      body: message,
+      body:` Thank you for choosing Wok N Roll, Your order will be ready in 25 minutes. Your order is:${message}`,
       from: '+18573845092',
       to: to
     })
@@ -83,16 +83,17 @@ const customer = (to, message) => {
 };
 
 app.post('/', (req, res) => {
-  const order = JSON.parse(req.body.order)
-  console.log("order", order[0].title)
+  let order = JSON.parse(req.body.order)
+  const orderMap = order.map(order => order.title).toString();
+  console.log("orderMap", orderMap)
+  console.log("order", order.title)
   const orderMessage = ``
-customer('+12063101339', order[0].title, order[0].title)
-customer('+16043666839', order[0].title)
-  restaurant('+18254499437')
+
+customer('+12063101339', orderMap)
+customer('+16043666839', orderMap)
+restaurant('+18254499437', orderMap)
   return res.send()
 });
-
-
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

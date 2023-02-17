@@ -85,6 +85,7 @@ function handleChangeItemQuantity() {
     this.value = 1;
   }
   this.value = Math.floor(this.value); // to keep it an int
+  update()
 }
 
 function handleBuyOrder() {
@@ -112,7 +113,8 @@ function updateTotal() {
 
   })
   total = total.toFixed(2)
-totalElement.innerHTML = "$" + total
+  totalElement.innerHTML = "$" + total
+
 
 }
 
@@ -155,9 +157,7 @@ function update() {
   updateTotal();
 }
 
-
-
-// Client facing scripts here
+// Drop down menus 
 const foodItems = document.querySelectorAll('.food-item');
 const menus = document.querySelectorAll('.menu');
 

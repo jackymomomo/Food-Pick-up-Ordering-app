@@ -1,3 +1,13 @@
+$( document ).ready(function() {
+  $( ".button-buy" ).click(function() {
+    $.post( "/", function( data ) {
+      console.log( data );
+    });
+  });
+  console.log( "ready!" );
+});
+
+
 //open & close cart
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");

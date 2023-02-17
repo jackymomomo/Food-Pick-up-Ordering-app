@@ -20,7 +20,7 @@ addEvents();
 //   start();
 // }
 // start
-// function start() {
+// function start() { 
 //   addEvents()
 // }
 
@@ -75,6 +75,7 @@ function handleChangeItemQuantity() {
     this.value = 1;
   }
   this.value = Math.floor(this.value); // to keep it an int
+  update()
 }
 
 function handleBuyOrder() {
@@ -102,7 +103,8 @@ function updateTotal() {
 
   })
   total = total.toFixed(2)
-totalElement.innerHTML = "$" + total
+  totalElement.innerHTML = "$" + total
+  
 
 }
 

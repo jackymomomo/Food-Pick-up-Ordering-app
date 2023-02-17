@@ -28,10 +28,15 @@
 
 .logo {
   font-family: 'Bungee', sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  color: #ff6600;
-  text-shadow: 1px 1px #333;
+  font-size: 1.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #222222;
+  text-shadow: 1px 1px #999;
+  background-image:  linear-gradient(to right, #11998e, #38ef7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
@@ -76,4 +81,10 @@
 .signup-btn:active {
   transform: translateY(4px);
   box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 1030px) {
+  .nav-Bar{
+    height: 130px;
+  }
 }

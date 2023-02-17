@@ -28,6 +28,8 @@
 <link rel="stylesheet" href="/styles/social-media-icons.css">
   <link rel="stylesheet" href="/styles/pics.css">
   <link rel="stylesheet" href="/styles/footer.css">
+  <link rel="stylesheet" href="/styles/.css">
+  
 
 
   <!-- App script -->
@@ -44,7 +46,7 @@
     <!-- Top nav bar (fixed) -->
     </section>
     <nav class="nav-Bar">
-      <a href="#" class="logo">Wok, & roll </a>
+      <a href="#" class="logo">Wok & roll</a>
       <div class="nav-links">
         <div class="social-buttons">
           <a href="https://www.facebook.com/profile.php?id=100089970687570" class="social-button social-button--facebook" aria-label="Facebook">
@@ -64,27 +66,37 @@
         </div>
 
       </div>
-      <a href="#" class="signup-btn"><div id="cart-icon">
-        <i class="fa-solid fa-bag-shopping"></i>
+      <a href="#" id="cart-icon" class="signup-btn"><div id="cart-icon">
+        <i class="fa-solid fa-bag-shopping fa-lg"></i>
       </div></a>
     </nav>
     <!-- Food menus html -->
     <section class="food-menus">
       <h2 class="menu-logo">Menus</h2>
-    <div class="food-images">
-      <a href="#menu1" class="food-item">
-        <img class="specials" src="https://cdn.discordapp.com/attachments/1073664859222319154/1075652102715605132/first.jpg">
-      </a>
-      <a href="#menu2" class="food-item">
-        <img class="dinner" src="https://cdn.discordapp.com/attachments/1073664859222319154/1075652103000821760/middle.jpg">
-      </a>
-      <a href="#menu3" class="food-item">
-        <img class="breakfast" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80" >
-      </a>
+
+      <div class="food-images">
+        <a href="#menu1" class="food-item">
+          <img class="specials" src="https://cdn.discordapp.com/attachments/1073664859222319154/1075652102715605132/first.jpg">
+        </a>
+        <a href="#menu2" class="food-item">
+          <img class="dinner" src="https://cdn.discordapp.com/attachments/1073664859222319154/1075652103000821760/middle.jpg">
+        </a>
+        <a href="#menu3" class="food-item">
+          <img class="breakfast" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80">
+        </a>
+    </div>
+    <div class="food-icons">
+      <i class="fa-solid fa-angles-down fa-bounce fa-2xl"></i>
+      <i class="fa-solid fa-angles-down fa-bounce fa-2xl"></i>
+      <i class="fa-solid fa-angles-down fa-bounce fa-2xl"></i>
+    </div>
+    <div class="menu-names-above">
+      <p> Dinner </p>
+      <p class="specials-p"> Specials </p>
+      <p> Breakfast </p>
     </div>
 
       <div id="menu1" class="menu">
-        <h3 class="menu-header">Specials</h3>
         <div class="grid-container">
           <% menuItems.forEach((menuItem) => { %>
             <div class="product-box">
@@ -97,14 +109,13 @@
               <span class="product-price">
                 <%= menuItem.price %>
               </span>
-              <i class="fa-solid fa-bag-shopping add-cart"></i>
+              <i class="fa-solid fa-bag-shopping add-cart">&emsp;Buy Now</i>
             </div>
           <% }) %>
         </div>
       </div>
 
       <div id="menu2" class="menu">
-        <h3 class="menu-header">Dinner</h3>
         <div class="grid-container">
           <% menuItems.forEach((menuItem) => { %>
             <div class="product-box">
@@ -117,14 +128,13 @@
               <span class="product-price">
                 <%= menuItem.price %>
               </span>
-              <i class="fa-solid fa-bag-shopping add-cart"></i>
+              <i class="fa-solid fa-bag-shopping add-cart">&emsp;Buy Now</i>
             </div>
           <% }) %>
         </div>
       </div>
 
       <div id="menu3" class="menu">
-        <h3 class="menu-header">Lunch</h3>
         <div class="grid-container">
           <% menuItems.forEach((menuItem) => { %>
             <div class="product-box">
@@ -137,7 +147,7 @@
               <span class="product-price">
                 <%= menuItem.price %>
               </span>
-              <i class="fa-solid fa-bag-shopping add-cart"></i>
+              <i class="fa-solid fa-bag-shopping add-cart">&emsp;Buy Now</i>
             </div>
           <% }) %>
         </div>
@@ -189,6 +199,13 @@
       <p>Our menu includes a variety of appetizers, entrees, and desserts, as well as vegetarian and gluten-free options. We also offer catering services for events of all sizes. </p>
       <p>At Wok and Roll, we strive to provide our customers with a friendly and welcoming atmosphere, as well as exceptional food and service. We look forward to serving you soon!</p>
     </section>
+
+    <div class="about-section-farmhouse">
+      <h2 class="about-heading">Farm-to-Table Cooking at its Finest</h2>
+      <p class="about-text">At Wok & Roll, we believe in the power of simple, wholesome ingredients to create delicious and satisfying meals. Our chefs work directly with local farmers to source the freshest produce, and our menu changes seasonally to reflect the best that each time of year has to offer. From hearty soups to crispy salads, we have something for every taste and appetite. Join us for a meal and experience the warmth and comfort of a true farmhouse kitchen.</p>
+    </div>
+    <p class="og-code">Have fun! 🥔</p>
+
     <!-- Footer -->
     <footer>
       <div class="footer-container">
@@ -196,14 +213,7 @@
           <img src="https://i.pinimg.com/564x/db/63/df/db63dfb015cec41306deee05c762d2a0.jpg" alt="Logo">
           <h3>Wok & Roll</h3>
         </div>
-        <div class="footer-nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
+        
         <div class="footer-social">
           <h3>Follow us on social media</h3>
           <div class="social-icons">
@@ -212,12 +222,26 @@
             <a href="https://www.instagram.com/wok_and_roll98/"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
+
+        <div class="footer-nav">
+          <div class="3d-menu">
+            <ul>
+              <li style="--i:7;"><a href="#">Home</a></li>
+              <li style="--i:6;"><a href="#">About</a></li>
+              <li style="--i:5;"><a href="#">Contact</a></li>
+              <li style="--i:4;"><a href="#">Service</a></li>
+              <li style="--i:3;"><a href="#">Play list</a></li>
+              <li style="--i:2;"><a href="#">Subscribe</a></li>
+              <li style="--i:1;"><a href="#">Like</a></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
       <div class="footer-bottom">
         <p>&copy; 2023 Wok & Roll. All rights reserved.</p>
       </div>
     </footer>
-
 
 </body>
 

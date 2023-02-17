@@ -27,10 +27,13 @@ body {
 }
 
 .about h3 {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-  color: #333;
+  font-family: "Bungee", sans-serif;
+  color: #ffffff;
+  font-size: 50px;
+  text-shadow: 1px 1px #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about p {
@@ -43,3 +46,40 @@ body {
 .about p:last-child {
   margin-bottom: 0;
 }
+
+.about-section-farmhouse {
+  background-image: url('https://plus.unsplash.com/premium_photo-1661778021952-65997d03b2b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 50px;
+  margin: 100px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fe9191;
+  text-shadow: 2px 2px #000000;
+}
+
+.about-heading {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.about-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.og-code{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8f8f8;
+  text-shadow: 2px 2px #000000;
+}
+

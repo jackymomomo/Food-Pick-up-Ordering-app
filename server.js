@@ -9,11 +9,16 @@ const morgan = require('morgan');
 const PORT = process.env.PORT || 8080;
 const app = express();
 
-app.set('view engine', 'ejs');
+//TWT
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = require('twilio')(accountSid, authToken);
+
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
 //         The :status token will be colored red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
+app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(
@@ -57,7 +62,34 @@ app.get('/', (req, res) => {
 
 });
 
-// app.post('/', (req, res))
+const restaurant = (to) => {
+  client.messages
+  .create({
+      body: 'An order has been placed',
+      from: '+18573845092',
+      to: to
+    })
+   .then(message => console.log(message.sid))
+};
+
+const customer = (to) => {
+  client.messages
+  .create({
+      body: 'Your order has been placed',
+      from: '+18573845092',
+      to: to
+    })
+   .then(message => console.log(message.sid))
+};
+
+app.post('/', (req, res) => {
+customer('+12063101339')
+customer('+16043666839')
+restaurant('+18254499437')
+  return res.send()
+});
+
+
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
